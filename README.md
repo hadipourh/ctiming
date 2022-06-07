@@ -93,7 +93,7 @@ AES-NI works correctly
 Speed of AES-NI: 1.25 [Clock cycles]/[Byte]
 ```
 
-As you can see, employing AES-NI results in a way better performance.
+It can be seen that employing AES-NI results in a way better performance.
 
 ## References
 
