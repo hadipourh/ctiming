@@ -9,13 +9,12 @@ algorithms in C/C++.
   - [Hardware/Software Setup](#hardwaresoftware-setup)
   - [AES](#aes)
   - [AES-NI](#aes-ni)
+  - [Usage](#usage)
   - [References](#references)
   
 ## Measuring CPU Cycles
 
-To get the number of clock cycles required for running a process, we can use the [Time Stamp Counter (TSC)](https://en.wikipedia.org/wiki/Time_Stamp_Counter). TSC counts the number of CPU clock cycles since its last reset. Measuring the performance based on CPU clock cycles is more accurate than measuring based on time since it is independent of CPU clock frequency.
-
-In C language, we can use `RDTSC` (and `RDTSCP`) to get the value of TSC. To see the more detail see [timing.h](aesni/timing.h).
+To get the number of clock cycles required for running a process, we can use the [Time Stamp Counter (TSC)](https://en.wikipedia.org/wiki/Time_Stamp_Counter). TSC counts the number of CPU clock cycles since its last reset. Measuring the performance based on CPU clock cycles is more accurate than measuring based on time since it is independent of CPU clock frequency. In C language, we can use `RDTSC` (and `RDTSCP`) to get the value of TSC. To see the more detail see [timing.h](aesni/timing.h).
 
 Modern processors have multiple CPU cores. The operating system (OS) assigns each task to a specific core. 
 Many processes are running when OS is up, and OS may move the execution of a single process from one core to another while the corresponding program is running. 
@@ -60,7 +59,7 @@ Linux ipn012 5.15.5-051505-generic #202111250933 SMP Thu Nov 25 09:37:51 UTC 202
 
 This example is a table-based implementation of AES in C language borrowed from [crypto-algorithms](https://github.com/B-Con/crypto-algorithms).
 
-To build and run the performance measurement, navigate into [aes](aes) folder run the following command:
+To build and run the performance measurement, navigate into [aes](aes) folder and next issue the following command:
 
 ```
 make
@@ -79,7 +78,7 @@ Speed of AES: 47.69 [Clock cycles]/[Byte]
 
 This example which is borrowed from [aes-brute-force](https://github.com/sebastien-riou/aes-brute-force/blob/master/include/aes_ni.h), is an implementation of AES in C language that employs the [AES New Instructions (AES-NI)](library/Gueron2009_Chapter_IntelSNewAESInstructionsForEnh.pdf).
 
-To build and run the performance measurement, navigate into [aesni](aesni) folder run the following command:
+To build and run the performance measurement, navigate into [aesni](aesni) folder and then run the following command:
 
 ```
 make
@@ -96,6 +95,10 @@ Speed of AES-NI: 1.25 [Clock cycles]/[Byte]
 ```
 
 It can be seen that employing AES-NI results in a way better performance.
+
+## Usage
+
+We have provided a header file named [`timing.h`](aesni/aesni.h). You can include it into your C code and then measure the number of required CPU clock cycles to execute a C code block. To this end, you can use `start_timer()` and `end_timer()` functions before and after the corresponding block. To see more details, you can refer to the [`test.c`](aesni/test.c) file in the provided examples.
 
 ## References
 
