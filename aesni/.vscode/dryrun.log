@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/hhadipour/Desktop/timing/aesni'
+gcc -g -O1 -Wall -msse2 -msse -march=native -maes -o test test.c
+make: Leaving directory '/home/hhadipour/Desktop/timing/aesni'
+ 

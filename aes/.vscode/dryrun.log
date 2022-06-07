@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/hhadipour/Desktop/timing/aes'
+gcc -g -Wall -O3 -o test aes.o test.o
+make: Leaving directory '/home/hhadipour/Desktop/timing/aes'
+ 
