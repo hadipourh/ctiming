@@ -6,7 +6,7 @@ algorithms in C/C++.
 ---
 - [Performance Measurement in C/C++](#performance-measurement-in-cc)
   - [Measuring CPU Cycles](#measuring-cpu-cycles)
-  - [Our setup to perform the experiments](#our-setup-to-perform-the-experiments)
+  - [Hardware/Software Setup](#hardwaresoftware-setup)
   - [AES](#aes)
   - [AES-NI](#aes-ni)
   - [References](#references)
@@ -36,7 +36,9 @@ echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 To show how we measure the performance of an encryption algorithm, we have chosen two implementations of AES. One of them follows the table-based implementation approach, and another employs the AES New Instructions (AES-NI).
 
-## Our setup to perform the experiments
+## Hardware/Software Setup
+
+We used a laptop with the following configurations to perform our experiments.
 
 **CPU**
 

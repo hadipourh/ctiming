@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jun  7 12:37:39 2022
+# Make data base, printed on Tue Jun  7 21:07:06 2022
 
 # Variables
 
@@ -127,13 +127,11 @@ GDK_PIXBUF_MODULEDIR = /snap/code/97/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.1
 # environment
 LS_COLORS = 
 # environment
-PARENT_WINDOW_ID = x11:e00007
-# environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 41910
+GIO_LAUNCHED_DESKTOP_FILE_PID = 66078
 # automatic
 %F = $(notdir $%)
 # environment
@@ -203,7 +201,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ec831e08-6fef-4fbf-b961-b5d09195e1da.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-258e2f14-6277-48c0-8005-beab3c981e20.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -285,11 +283,12 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 41959
+VSCODE_PID = 66123
 # environment
 DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ddbaaa694b6120244c63cbb3629ee07c
 # variable set hash-table stats:
-# Load=139/1024=14%, Rehash=0, Collisions=22/170=13%
+ 
+# Load=138/1024=13%, Rehash=0, Collisions=22/169=13%
 
 # Pattern-specific Variable Values
 
@@ -297,9 +296,9 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ddbaaa694b6120244c63cbb
 
 # Directories
 
-# . (device 64769, inode 42602886): 11 files, no impossibilities.
+# . (device 64769, inode 42602886): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -321,7 +320,6 @@ all: aes.o test.o
 # automatic
 # * := 
 # automatic
- 
 # + := aes.o test.o
 # automatic
 # | := 
@@ -351,7 +349,7 @@ Makefile:
 
 test.o: aes.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-07 12:36:49.180437149
+#  Last modified 2022-06-07 21:06:11.680711182
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 32):
@@ -379,7 +377,7 @@ clean:
 
 aes.o: aes.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-07 12:36:48.956435596
+#  Last modified 2022-06-07 21:06:11.636710994
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 34):
@@ -393,12 +391,12 @@ aes.o: aes.h
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 134 B / avg = 7 B
-# current buf: size = 8162 B / used = 134 B / count = 17 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 139 B / avg = 7 B
+# current buf: size = 8162 B / used = 139 B / count = 18 / avg = 7 B
 
-# strcache performance: lookups = 33 / hit rate = 48%
+# strcache performance: lookups = 34 / hit rate = 47%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=1/33=3%
-# Finished Make data base on Tue Jun  7 12:37:39 2022
+# Load=18/8192=0%, Rehash=0, Collisions=1/34=3%
+# Finished Make data base on Tue Jun  7 21:07:06 2022
 
  

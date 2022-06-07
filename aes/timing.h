@@ -4,7 +4,7 @@
 #include <stdint.h> // needed to use uint64_t
 #include <stdlib.h> // needed to use qsort()
 
-#define NUM_TIMINGS (1LLU << 20)
+#define NUM_TIMINGS (1LLU << 22)
 #define OVERHEAD_LOOPS 1000000
 
 uint64_t start_timer(void);
@@ -53,15 +53,17 @@ int compare_u64(const void *x, const void *y)
 
 // compute the measurement overhead
 uint64_t measure_overhead(){
-    uint64_t cycles[OVERHEAD_LOOPS];
+    uint64_t *cycles = (uint64_t *)malloc(OVERHEAD_LOOPS * sizeof(uint64_t));
     uint64_t temp;
-    for (int i = 0; i < OVERHEAD_LOOPS; i++){
+    for (uint64_t i = 0; i < OVERHEAD_LOOPS; i++){
         temp = start_timer();
         temp = end_timer() - temp;
         cycles[i] = temp;
     }
     qsort(cycles, OVERHEAD_LOOPS, sizeof(uint64_t), compare_u64);
-    return cycles[OVERHEAD_LOOPS / 2];
+    uint64_t output = cycles[OVERHEAD_LOOPS / 2];
+    free(cycles);
+    return output;
 }
 
 #endif

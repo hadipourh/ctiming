@@ -52,7 +52,7 @@ int main(){
     }
     aes_key_setup(key, key_schedule, 128);
 
-    uint64_t *cycles = (uint64_t *)malloc(NUM_TIMINGS * sizeof(uint64_t));    
+    uint64_t *cycles = (uint64_t *)malloc(NUM_TIMINGS * sizeof(uint64_t));
     uint64_t temp;
     for (uint64_t i = 0; i < NUM_TIMINGS; i++){
         temp = start_timer();
@@ -63,5 +63,6 @@ int main(){
     qsort(cycles, NUM_TIMINGS, sizeof(uint64_t), compare_u64);
     rate = (double)(cycles[NUM_TIMINGS / 2] - timing_overhead) / byte_length_of_processed_data;
     printf("Speed of AES: %0.02f [Clock cycles]/[Byte]\n", rate);
+    free(cycles);
     return 0;
 }
