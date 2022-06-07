@@ -57,9 +57,7 @@ Linux ipn012 5.15.5-051505-generic #202111250933 SMP Thu Nov 25 09:37:51 UTC 202
 
 ## AES
 
-This example is a table-based implementation of AES in C language borrowed from [crypto-algorithms](https://github.com/B-Con/crypto-algorithms).
-
-To build and run the performance measurement, navigate into [aes](aes) folder and next issue the following command:
+This example is a table-based implementation of AES in C language borrowed from [crypto-algorithms](https://github.com/B-Con/crypto-algorithms). To build and run the performance measurement, navigate into [aes](aes) folder and next issue the following command:
 
 ```
 make
@@ -76,9 +74,7 @@ Speed of AES: 47.69 [Clock cycles]/[Byte]
 
 ## AES-NI
 
-This example which is borrowed from [aes-brute-force](https://github.com/sebastien-riou/aes-brute-force/blob/master/include/aes_ni.h), is an implementation of AES in C language that employs the [AES New Instructions (AES-NI)](library/Gueron2009_Chapter_IntelSNewAESInstructionsForEnh.pdf).
-
-To build and run the performance measurement, navigate into [aesni](aesni) folder and then run the following command:
+This example which is borrowed from [aes-brute-force](https://github.com/sebastien-riou/aes-brute-force/blob/master/include/aes_ni.h), is an implementation of AES in C language that employs the [AES New Instructions (AES-NI)](library/Gueron2009_Chapter_IntelSNewAESInstructionsForEnh.pdf). To build and run the performance measurement, navigate into [aesni](aesni) folder and then run the following command:
 
 ```
 make
