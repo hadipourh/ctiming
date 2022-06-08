@@ -94,7 +94,7 @@ It can be seen that employing AES-NI results in a way better performance.
 
 ## Usage
 
-We have provided a header file named [`timing.h`](aesni/aesni.h). You can include it into your C code and then measure the number of required CPU clock cycles to execute a C code block. To this end, you can use `start_timer()` and `end_timer()` functions before and after the corresponding block. To see more details, you can refer to the [`test.c`](aesni/test.c) file in the provided examples.
+We have provided a header file named [`timing.h`](aesni/timing.h). You can include it into your C code and then measure the number of required CPU clock cycles to execute a C code block. To this end, you can use `start_timer()` and `end_timer()` functions before and after the corresponding block. To see more details, you can refer to the [`test.c`](aesni/test.c) file in the provided examples.
 
 ## References
 
